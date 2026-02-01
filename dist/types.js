@@ -1,0 +1,4 @@
+/**
+ * ClawSignal Type Definitions
+ */
+export {};

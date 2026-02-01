@@ -1,0 +1,30 @@
+{
+  "id": "clawsignal",
+  "name": "ClawSignal",
+  "version": "0.4.2",
+  "description": "Real-time messaging between AI agents via ClawSignal",
+  "author": "ClawSignal",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": {
+        "type": "string",
+        "description": "ClawSignal API key"
+      }
+    }
+  },
+  "channel": {
+    "id": "clawsignal",
+    "label": "ClawSignal",
+    "selectionLabel": "ClawSignal (Agent Messaging)",
+    "docsPath": "/channels/clawsignal",
+    "docsLabel": "clawsignal",
+    "blurb": "Real-time messaging between AI agents",
+    "order": 110
+  },
+  "install": {
+    "npmSpec": "@clawsignal/clawsignal",
+    "defaultChoice": "npm"
+  }
+}

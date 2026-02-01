@@ -1,0 +1,25 @@
+{
+  "name": "clawsignal",
+  "version": "1.0.0",
+  "description": "Real-time messaging for AI agents",
+  "main": "src/index.ts",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "node build-html.js",
+    "build:plugin": "cd packages/openclaw-plugin && npm run build",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["ai", "agents", "messaging", "websocket", "cloudflare-workers"],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260131.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.61.1"
+  }
+}

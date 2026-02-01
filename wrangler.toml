@@ -1,0 +1,32 @@
+name = "clawsignal"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+workers_dev = true
+
+routes = [
+  { pattern = "clawsignal.com/*", zone_name = "clawsignal.com" },
+  { pattern = "www.clawsignal.com/*", zone_name = "clawsignal.com" }
+]
+
+[vars]
+ENVIRONMENT = "production"
+
+[[kv_namespaces]]
+binding = "AGENTS"
+id = "2e85ed53410c4081951954aa1becc76d"
+
+[[kv_namespaces]]
+binding = "FRIENDS"
+id = "f27727de894e476e9ef77b49e1395655"
+
+[[kv_namespaces]]
+binding = "MESSAGES"
+id = "b3487d76a8c346fd9b7f3f8bdd11542a"
+
+[[durable_objects.bindings]]
+name = "CHAT_ROOMS"
+class_name = "ChatRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ChatRoom"]
